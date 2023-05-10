@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search JS</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 96%;
+            max-width: 1100px;
+            height: 60vh;
+            margin: auto;
+            background: rgba(252, 214, 143, 0.878);
+            border-radius: 10px;
+            text-align: center;
+        }
+        .search-container {
+            padding-top: 10vh;
+        }
+        input {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+            font-size: 1rem;
+            margin-bottom: 3vh;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="search-container">
+                <input type="text" name="search-field" id="search-field" placeholder="Search here...">
+                <div id="search-results"></div>
+            </div>
+        </div>
+    </header>
+
+    <script>
+        const phones = [
+            { name: 'samsung s5', price: 45000, camera: 10, storage: 32 },
+            { name: 'walton m32', price: 15000, camera: 8, storage: 8 },
+            { name: 'shaomi m3', price: 12000, camera: 8, storage: 16 },
+            { name: 'oppo a2', price: 17000, camera: 8, storage: 32 },
+            { name: 'nokia n95', price: 8000, camera: 8, storage: 4 },
+            { name: 'htc h81', price: 25000, camera: 8, storage: 16 }
+        ];
+
+
+        document.getElementById('search-field').addEventListener('keyup', function(event) {
+            const searchText = event.target.value.toLowerCase();
+            const searchResult = document.getElementById('search-results')
+            const p = document.createElement('p');
+            
+            for (const phone of phones) {
+                searchResult.innerHTML = '';
+                const phoneName = phone.name.toLowerCase();
+                if (phoneName.includes(searchText)) {
+                    if (searchText != '') {
+                        p.innerHTML += `name: ${phoneName} price: ${phone.price} camera: ${phone.camera} storage: ${phone.storage} <br>`;
+                    }
+                }
+            }
+            searchResult.appendChild(p);
+        })
+document.getElementById('search-field').addEventListener('blur', function() {
+    document.getElementById('search-results').innerHTML = '';
+    document.getElementById('search-field').value = ''
+});
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "name": "Basic Plan",
+    "price": 29.99,
+    "features": ["Access to basic equipment", "Locker rooms"]
+  },
+  {
+    "id": 2,
+    "name": "Standard Plan",
+    "price": 49.99,
+    "features": [
+      "Access to all equipment",
+      "Group classes",
+      "Personal training",
+      "Pool"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Premium Plan",
+    "price": 79.99,
+    "features": [
+      "Access to all equipment & facilities",
+      "Spa treatments",
+      "Exclusive area access",
+      "Merchandise discounts"
+    ]
+  }
+]

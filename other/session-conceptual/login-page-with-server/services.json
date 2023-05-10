@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "name": "Web Development",
+    "description": "We can build custom websites and web applications tailored to your needs.",
+    "price": 1000,
+    "duration": "2-4 weeks"
+  },
+  {
+    "id": 2,
+    "name": "Graphic Design",
+    "description": "Our designers can create beautiful logos, business cards, and other marketing materials.",
+    "price": 500,
+    "duration": "1-2 weeks"
+  },
+  {
+    "id": 3,
+    "name": "Social Media Management",
+    "description": "Let us handle your social media presence so you can focus on your business.",
+    "price": 750,
+    "duration": "Ongoing"
+  },
+  {
+    "id": 4,
+    "name": "App Management",
+    "description": "Let us handle your social media presence so you can focus on your business.",
+    "price": 150,
+    "duration": "Ongoing"
+  },
+  {
+    "id": 45,
+    "name": "Custom Data",
+    "description": "Let us handle your social media presence so you can focus on your business.",
+    "price": 150,
+    "duration": "2-4weeks"
+  }
+]

@@ -1,0 +1,19 @@
+sub + am/is/are + occupation (noun)
+sub + was/were + condition (adjective)
+
+I am a student of web development.
+I am a learner.
+My father is a worker.
+we are learning web development.
+My mother is a worker.
+
+I was a student.
+My father was a famer.
+My mother was a homemaker.
+My brother was a student.
+
+I was ill.
+we were playing football.
+
+
+

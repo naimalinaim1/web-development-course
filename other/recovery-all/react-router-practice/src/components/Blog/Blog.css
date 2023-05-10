@@ -1,0 +1,18 @@
+.blog {
+  border: 2px solid skyblue;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.blog a,
+button {
+  background: skyblue;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 5px 15px;
+  border-radius: 5px;
+  color: #ff0088;
+  border: 0;
+  margin: 5px;
+}

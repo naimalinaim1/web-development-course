@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event</title>
+</head>
+<body>
+    <header>
+        <button onclick="onClickBtn()">onclick handle</button>
+        <button id="event-handle">event handle</button>
+        <div id="comment-container">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora earum tempore deserunt a delectus recusandae, quam sed iure in, ad facilis mollitia quos quas unde est iusto voluptates eaque! Fugit eveniet ducimus enim? Placeat, corrupti doloribus voluptate odio impedit ducimus earum ipsam tempore delectus quod, esse consequuntur non illo quidem minima omnis? Consequuntur cupiditate illo voluptatum eius molestiae? A sequi rem voluptatum, cum autem qui reprehenderit iure minima sit delectus?</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio numquam eligendi dolorum quod architecto quas repudiandae repellendus ipsum blanditiis minus provident laboriosam illum rerum magni tenetur consequuntur porro, natus iusto eum qui impedit autem libero ab animi! Dolorum iusto ab iure nostrum voluptatibus soluta doloremque nihil vel nulla pariatur reprehenderit deleniti placeat, id perferendis quas quaerat mollitia assumenda ea delectus.</p>
+        </div>
+        <div>
+            <textarea id="comment-here" cols="60" rows="10"></textarea>
+            <br> <br>
+            <button id="comment-post">Post Comment</button>
+        </div>
+        <div>
+            <h2 id="info">Delete secret</h2>
+            <input id="confirm-delete" type="text" placeholder="please write delete">
+            <button id="delete" disabled>Delete</button>
+        </div>
+        <div id="section" style="padding: 10px">
+            <ul id="list-container">
+                <li class="item">Lorem, ipsum dolor.</li>
+                <li class="item">Rerum, quod natus.</li>
+                <li class="item">Reiciendis, maiores harum!</li>
+                <li class="item">Hic, beatae accusantium?</li>
+            </ul>
+            <div>
+                <button id="add-item">Add item</button>
+            </div>
+        </div>
+    </header>
+
+    <script>
+        /**
+         * event handler
+        */
+        function onClickBtn() { console.log('btn handle trigger');}
+        document.getElementById('event-handle').addEventListener('click', function () {
+            console.log('btn event trigger');
+        });
+        
+        /**
+         * comment area js code
+         */
+        document.getElementById('comment-post').addEventListener('click', function () {
+            const commentElement = document.getElementById('comment-here');
+            const commentText = commentElement.value;
+
+            const commentContainer = document.getElementById('comment-container');
+            const makeParagraph = document.createElement('p');
+
+            makeParagraph.innerText = commentText;
+            commentContainer.appendChild(makeParagraph);
+        });
+
+        /**
+         * delete button
+        */
+        
+        const deleteButton = document.getElementById('delete');
+        document.getElementById('confirm-delete').addEventListener('keyup', function (event) {
+            const delText = event.target.value.toLowerCase();
+            if (delText === 'delete') {
+                deleteButton.removeAttribute('disabled');
+            } else {
+                deleteButton.setAttribute('disabled', true);
+            }
+        })
+
+        deleteButton.addEventListener('click', function () {
+            const information = document.getElementById('info');
+            information.style.visibility = 'hidden';
+        })
+
+        /**
+         * event bubble and stop propagation
+        */
+        document.getElementById('list-container').addEventListener('click', function (event) {
+                // event.stopPropagation();
+                event.target.parentNode.removeChild(event.target);
+            })
+
+        document.getElementById('add-item').addEventListener('click', function () {
+            const liContainer = document.getElementById('list-container');
+            const li = document.createElement('li');
+            li.innerText = 'brand new item';
+            li.classList.add('item')
+            liContainer.appendChild(li);
+        })
+
+        document.getElementById('section').addEventListener('click', function () {
+            console.log('section trigger')
+        })
+
+
+
+    </script>
+</body>
+</html>

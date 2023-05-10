@@ -1,0 +1,73 @@
+body {
+    margin: 0;
+}
+
+.top-header {
+    background-color: cadetblue;
+    margin: 0;
+}
+.top-header > h1 {
+    margin: 0;
+    padding: 40px 0 45px;
+    text-align: center;
+    color: antiquewhite;
+    font-family: cursive;
+}
+.top-header > h1 > span {
+    color: brown;
+}
+.top-header > h1 > span:hover {
+    color: burlywood;
+}
+
+.main-header {
+    width: 96%;
+    max-width: 1170px;
+    background: rgb(229, 101, 54);
+    margin: auto;
+    padding: 20px 30px;
+}
+.main-header > h2 {
+    color: blueviolet;
+    margin: 0;
+}
+.main-header p {
+    color: wheat;
+    font-size: 1.25rem;
+}
+
+.blog-container {
+    width: 96%;
+    max-width: 1170px;
+    background: #ddd;
+    margin: auto;
+    padding: 20px 30px;
+}
+.blog {
+   border: 1px solid crimson;
+   border-radius: 7px;
+   margin: 25px 0;
+   padding: 4%;
+}
+.blog h2 {
+    margin: 0;
+    background: bisque;
+    padding: 7px 15px;
+    border-radius: 5px;
+}
+.blog p {
+    font-size: 1.2rem;
+}
+
+.footer {
+    width: 100%;
+    background: #151515;
+    padding: 20px 0;
+}
+.footer p {
+    color: #c8c5c5;
+    margin: 0;
+    text-align: center;
+    font-size: 0.9rem;
+
+}

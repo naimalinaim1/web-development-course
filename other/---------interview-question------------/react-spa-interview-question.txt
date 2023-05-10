@@ -1,0 +1,4 @@
+1. what are the components in react?
+2. what do you mean by SPA?
+3. Examples of SPA, MPA.
+4. what is the best between SPA and MPA?

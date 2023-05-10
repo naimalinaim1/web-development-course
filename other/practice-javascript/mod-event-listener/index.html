@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event</title>
+</head>
+<body style="min-height: 100vh;">
+    <header>
+        <button id="click">click btn 1</button>
+        <button id="dblclick">dblclick btn 2</button>
+        <button id="mouse-down">mouse down</button>
+        <button id="mouse-up">mouse up</button>
+        <button id="mouse-enter">mouse enter</button>
+        <button id="mouse-leave">mouse leave</button>
+        <button id="mouse-move">mouse move</button>
+    </header>
+
+    <script>
+        document.getElementById('click').addEventListener('click', function () {
+            alert('click btn 1');
+        })
+        document.getElementById('dblclick').addEventListener('dblclick', function () {
+            alert('dblclick btn 2');
+        })
+        document.getElementById('mouse-down').addEventListener('mousedown', function () {
+            alert('mouse down button clicked');
+        })
+        document.getElementById('mouse-up').addEventListener('mouseup', function () {
+            alert('mouse up button clicked');
+        })
+        document.getElementById('mouse-enter').addEventListener('mouseenter', function () {
+            alert('mouse enter button enter');
+        })
+
+        document.getElementById('mouse-leave').addEventListener('mouseleave', function () {
+            alert('mouse leave button leave');
+        })
+        document.getElementById('mouse-move').addEventListener('mousemove', function () {
+            console.log('mouse move')
+        })
+        document.body.addEventListener('contextmenu', function (event) {
+            // event.stopPropagation();
+
+            const div = document.createElement('div');
+            div.setAttribute('id', 'option')
+            div.innerHTML = `
+            <p>options</p>
+                <ul>
+                    <li>option 1</li>
+                    <li>option 2</li>
+                    <li>option 3</li>
+                    <li>option 4</li>
+                    <li>option 5</li>
+                </ul>
+            `;
+            document.body.appendChild(div);
+            const getDiv = document.getElementById('option');
+            getDiv.style.width = '150px';
+            getDiv.style.height = '220px';
+            getDiv.style.background = 'gray';
+            getDiv.style.borderRadius = '7px';
+        })
+    </script>
+</body>
+</html>

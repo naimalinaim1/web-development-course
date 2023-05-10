@@ -1,0 +1,13 @@
+color: ui color picker
+color palette:  color palette genator
+typhograpy: typhograpy
+
+design resouce:
+	figma resouce
+	theamforest
+	deibbble
+picture:
+	preepick
+	unsplash
+icons:
+	free icons

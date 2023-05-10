@@ -1,0 +1,10 @@
+body {
+  margin: 0;
+}
+
+h1 {
+  color: indigo;
+  background: skyblue;
+  padding: 10px 15px;
+  margin: 0;
+}

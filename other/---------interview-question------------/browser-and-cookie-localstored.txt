@@ -1,0 +1,8 @@
+1) How does Browser works?
+2) what is rerender in browser?
+3) what is the difference between an alert box and a confirmation box?
+4) what are javascript cookies?
+5) difference between local storage and session storage?
+6) what should you use? cooki or local storage or session storage *most improtant
+7) tell me 2difference between DOM vsBOM.
+8) Can you discuss the types of browser API?

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Bubble</title>
+    <style>
+        div {
+            padding: 25px 0;
+            border: 2px solid gray;
+        }
+    </style>
+</head>
+<body>
+    <div id="first">
+        <div id="second">
+            <div id="thard">
+                <ul>
+                    <li id="item-1">Lorem</li>
+                    <li id="item-2">Ipsum</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('item-1').addEventListener('click', function(event) {
+            console.log('item 1 clicked');
+            // event.stopImmediatePropagation()
+            event.stopPropagation();
+
+        });
+
+        document.getElementById('item-1').addEventListener('click', function() {
+            console.log('item 1 clicked yes');
+        });
+
+        document.getElementById('thard').addEventListener('click', function() {
+            console.log('thard');
+        });
+
+        document.getElementById('second').addEventListener('click', function() {
+            console.log('second');
+        });
+
+        document.getElementById('first').addEventListener('click', function() {
+            console.log('first');
+        });
+
+   
+        
+    </script>    
+</body>
+</html>

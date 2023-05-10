@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Persons</title>
+    <!-- daisyUI cdn link -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <header class="mt-56 w-[70%] mx-auto border border-4 border-success p-6 rounded-lg">
+        <h1 id="message" class="text-green-500 text-4xl mb-8 text-center font-bold"></h1>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="shadow-lg rounded-lg">
+                <div class="p-2 bg-base-200 border-b">
+                    <p>Person Name: <span id="p1-name"></span></p>
+                </div>
+                <div class="p-2 space-y-2">
+                    <p>age: <span id="p1-age"></span></p>
+                    <p>Street: <span id="p1-address"></span> House: <span id="p1-house"></span></p>
+                </div>
+            </div>
+            <div class="shadow-lg rounded-lg">
+                <div class="p-2 bg-base-200 border-b">
+                    <p>Person Name: <span id="p2-name"></span></p>
+                </div>
+                <div class="p-2 space-y-2">
+                    <p>age: <span id="p2-age"></span></p>
+                    <p>Street: <span id="p2-address"></span> House: <span id="p2-house"></span></p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <script defer src="js/api-1-data.js"></script>
+    <script defer src="js/person.js"></script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Nav</title>
+    <style>
+        nav > ul{
+            display: flex;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        nav ul li {
+            margin-right: 25px;
+            padding: 7px 15px;
+            border-radius: 7px;
+        }
+        nav ul li:hover {
+            background: #08e665;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #9d0cbbf3;
+            font-size: 18px;
+        }
+        /* Dropdown */
+        .dropdown {
+            display: none;
+            position: absolute;
+            list-style: none;
+            background: black;
+            padding: 5px 0px;
+        }
+        
+        .dropdown li {
+            margin-right: 0;
+        }
+        nav ul li:hover ul {
+            display: block;
+        }
+        .dropdown .dropdown {
+            display: none;
+        }
+        .dropdown li:hover .dropdown{
+            display: block;
+            position: absolute;
+            left: 100px;
+            top: 45px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">Service</a></li>
+                <li><a href="">Support</a>
+                    <ul class="dropdown">
+                        <li><a href="">Story</a></li>
+                        <li><a href="">Summery</a></li>
+                        <li><a href="">Other</a></li>
+                    </ul>
+                </li>
+                <li><a href="">Blog</a>
+                    <ul class="dropdown">
+                        <li><a href="">Story</a></li>
+                        <li><a href="">Summery</a>
+                            <ul class="dropdown">
+                                <li><a href="">Story</a></li>
+                                <li><a href="">Summery</a></li>
+                                <li><a href="">Other</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="">Other</a></li>
+                    </ul>
+                </li>
+                <li><a href="">My classes</a></li>
+                <li><a href="">My Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CocktailDB</title>
+    <style>
+        #container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin: 25px;
+        }
+        #container > div {
+            height: 400px;
+        }
+        img {
+            max-width: 96%;
+            height: 80%;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to cocktailDB</h1>
+        <div style="text-align: center;">
+            <input id="search-cocktail-field" type="text" placeholder="search cocktail">
+            <button onclick="searchCocktail()">Search</button>
+        </div>
+    </header>
+    <main>
+        <section id="container">
+
+        </section>
+    </main>
+    <script defer src="js/app.js"></script>
+</body>
+</html>

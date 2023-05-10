@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "price": 6,
+    "name": "Eileen Graham"
+  },
+  {
+    "id": 2,
+    "price": 3,
+    "name": "Potter Cooper"
+  },
+  {
+    "id": 3,
+    "price": 4,
+    "name": "Stacie Best"
+  },
+  {
+    "id": 4,
+    "price": 3,
+    "name": "West Patterson"
+  },
+  {
+    "id": 5,
+    "price": 1,
+    "name": "Robbins Jefferson"
+  },
+  {
+    "id": 6,
+    "price": 2,
+    "name": "Julianne Nunez"
+  },
+  {
+    "id": 7,
+    "price": 3,
+    "name": "Cardenas Beach"
+  },
+  {
+    "id": 8,
+    "price": 1,
+    "name": "Herminia Robles"
+  },
+  {
+    "id": 9,
+    "price": 4,
+    "name": "Clayton Rivas"
+  },
+  {
+    "id": 10,
+    "price": 6,
+    "name": "Ina Parrish"
+  }
+]

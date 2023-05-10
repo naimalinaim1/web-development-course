@@ -1,0 +1,5 @@
+1. combinations
+2. logarithm
+3. factorial
+4. Exponentials
+5. Modulus

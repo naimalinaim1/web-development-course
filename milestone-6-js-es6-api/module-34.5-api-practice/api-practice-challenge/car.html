@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Car</title>
+    <!-- daisyUI cdn link -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@2.51.0/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <header
+      id="header"
+      class="grid grid-cols-1 md:grid-cols-2 gap-10 w-[70%] mx-auto mt-20 p-8 rounded-xl border border-4 border-primary"
+    ></header>
+
+    <script src="js/api-2-data.js"></script>
+    <script>
+      const loadData = (data) => {
+        displayData(data);
+      };
+      const displayData = (cars) => {
+        const container = document.getElementById('header');
+        cars.forEach(car => {
+        console.log(car)
+          const div = document.createElement("div");
+          div.className = "card bg-base-100 border";
+          div.innerHTML = `
+            <figure class="px-10 pt-10">
+                <img src="${car.imageURL}" alt="Shoes" class="rounded-xl" />
+            </figure>
+            <div class="card-body">
+                <h2 class="card-title">${car.name}</h2>
+                <p>${car.description}</p>
+                <div class="card-actions">
+                    <button class="btn btn-primary">Car Price: ${car.price}</button>
+                </div>
+            </div>
+            `;
+            container.appendChild(div);
+        });
+      };
+      loadData(data);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Photos</title>
+    <style>
+      #container {
+        max-width: 96%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 15px;
+      }
+      #container div {
+        border: 1px solid #ddd;
+        border-radius: 10px;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+      #simple-modal {
+        width: 60%;
+        height: 65vh;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        background: lightgray;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        box-shadow: 30px 30px 200px skyblue;
+        text-align: center;
+      }
+      #simple-modal button {
+        width: 15%;
+        height: 5vh;
+        font-size: 1rem;
+        background: none;
+        border-radius: 3px;
+        border: 1px solid #ddd;
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+      }
+      #simple-modal:hover button {
+        background: lightseagreen;
+        cursor: pointer;
+      }
+      .modal-first-img {
+        width: 60%;
+        height: 250px;
+      }
+      .modal-second-img {
+        width: 30%;
+        height: 120px;
+      }
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Welcome to photos</h1>
+    </header>
+    <main>
+      <div id="simple-modal" class="hidden">
+      </div>
+      <section id="container"></section>
+    </main>
+    <script defer src="js/app.js"></script>
+  </body>
+</html>

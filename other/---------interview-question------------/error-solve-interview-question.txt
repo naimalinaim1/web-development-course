@@ -1,0 +1,2 @@
+1) what is syntax error?
+2) when do we get reference error?

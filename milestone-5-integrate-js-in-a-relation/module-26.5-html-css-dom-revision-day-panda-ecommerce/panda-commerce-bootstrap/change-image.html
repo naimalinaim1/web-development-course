@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Image</title>
+    <style>
+        .image-container {
+            display: flex;
+            justify-content: center;
+            padding: 100px 0;
+            background: pink;
+        }
+        #img {
+            width: 460px;
+            height: 450px;
+            border-radius: 5px;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <div class="image-container">
+        <img id="img" src="images/bags/bag-1.png" alt="">
+    </div>
+
+    <script>
+        const img = document.getElementById('img');
+        const imgList = ['images/bags/bag-1.png', 'images/bags/bag-2.png', 'images/bags/bag-3.png'];
+        let imgIndex = 0;
+        img.addEventListener('mouseenter', function () {
+            if (imgIndex == imgList.length-1) {
+                imgIndex = 0;
+            } else {
+                imgIndex++;
+            }
+            img.src = [imgList[imgIndex]];
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact me</title>
+    <!-- daisyUI cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.3/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        #contact  button {
+            width: 150px;
+            height: 45px;
+        }
+    </style>
+</head>
+<body>
+    <header class="bg-black flex justify-center items-center" style="height: 100vh;">
+        <div id="contact">
+            <p class="mb-8 text-center text-4xl text-white font-semibold">Please Contact me</p>
+            <!-- name -->
+            <div>
+                <p class="text-sky-600">Name</p>
+                <div class="text-white mb-2">
+                    <input id="name" class="text-gray-600 py-1 px-2 rounded-md block md:inline-block mb-3 md:mb-0" type="text" placeholder="Name" style="width: 300px;">
+                    <button onclick="addOrDelete('name', 'delete')" class="focus:bg-sky-500 ml-0 md:ml-4 bg-red-500 py-2 px-3 rounded-full">Delete Name</button>
+                    <button onclick="addOrDelete('name', 'send')" class="focus:bg-sky-500 bg-red-500 py-2 px-3 rounded-full">Send Name</button>
+                </div>
+            </div>
+            <!-- email -->
+            <div class="mb-2">
+                <p class="text-sky-600">Email</p>
+                <div class="text-white">
+                    <input id="email" class="text-gray-600 py-1 px-2 rounded-md block md:inline-block mb-3 md:mb-0" type="email" placeholder="Email" style="width: 300px;">
+                    <button onclick="addOrDelete('email', 'delete')" class="focus:bg-sky-500 ml-0 md:ml-4 bg-red-500 py-2 px-3 rounded-full">Delete Email</button>
+                    <button onclick="addOrDelete('email', 'send')" class="focus:bg-sky-500 bg-red-500 py-2 px-3 rounded-full">Send Email</button>
+                </div>
+            </div>
+            <!-- message -->
+            <div>
+                <p class="text-sky-600">Message</p>
+                <div class="text-white md:flex items-top">
+                    <textarea id="message" class="block md:inline-block text-gray-600 py-1 px-2 rounded-md mb-3 md:mb-0" placeholder="Message" style="width: 300px"></textarea>
+                    <button onclick="addOrDelete('message', 'delete')" class="focus:bg-sky-500 ml-0 md:ml-4 bg-red-500 py-2 px-3 rounded-full">Delete Message</button>
+                    <button onclick="addOrDelete('message', 'send')" class="focus:bg-sky-500 bg-red-500 py-2 px-3 rounded-full">Send Message</button>
+                </div>
+            </div>
+            <div class="text-center mt-8 flex justify-evenly">
+                <button onclick="sendAll()" class="hover:bg-sky-500 focus:bg-sky-500 bg-red-500 text-xl rounded-full px-3 py-2">Send</button>
+                <button onclick="resetAll()" class="focus:text-red-500 bg-yellow-500 text-xl rounded-full px-3 py-2">Reset</button>
+            </div>
+        </div>
+    </header>
+
+    <script defer src="js/contact.js"></script>
+</body>
+</html>

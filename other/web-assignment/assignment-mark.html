@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment Mark</title>
+</head>
+<body>
+    <header>
+        <h1>Assignment Information</h1>
+    </header>
+    <main>
+        <section class="mak">
+            <h3 class="total-assignment"></h3>
+            <h3 class="avr"></h3> 
+        </section>
+    </main>
+    <script>
+        var marks = [60, 58];
+        var len = marks.length;
+        document.querySelector(".total-assignment").innerHTML = `Total Assignment: ${len}`;
+        var sum = 0;
+        for (let i = 0; i < marks.length; i++) {
+            document.write(`<h4>Assignment ${i+1} mark ${marks[i]}</h4>`)
+            sum += marks[i];           
+        }
+        document.querySelector(".avr").innerHTML = `Avrage Marks: ${sum/len}`;
+    </script>
+</body>
+</html>

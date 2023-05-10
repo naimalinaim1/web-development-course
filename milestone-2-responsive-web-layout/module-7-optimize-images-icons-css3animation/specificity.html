@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Specificity</title>
+    <style>
+        #h-3 {
+            color: black;
+        }
+        .hd {
+            color: green;
+        }
+        h1 {
+            color: rgb(6, 131, 203) !important;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="hd" id="h-1">Heading one</h1>
+    <h1 class="hd" id="h-2">Heading one</h1>
+    <h1 class="hd" id="h-3" style="color: violet;">Heading one</h1>
+    <h1 class="hd" id="h-4">Heading one</h1>
+    <h1 class="hd" id="h-5">Heading one</h1>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Photo</title>
+    <style>
+        img {
+            width: 120px;
+            height: auto;
+            border-radius: 5px;
+        }
+        #photos-container {
+            display: grid;
+            grid-template-columns: repeat(9, 1fr);
+            gap: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>User photo</h1>
+    </header>
+    <main>
+        <section id="photos-container">
+
+        </section>
+    </main>
+
+    <script defer src="data-load-to-server.js"></script>
+</body>
+</html>

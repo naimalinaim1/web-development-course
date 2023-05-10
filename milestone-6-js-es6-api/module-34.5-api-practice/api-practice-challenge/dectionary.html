@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dictionary</title>
+    <link
+      rel="stylesheet"
+      href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <header
+      class="mt-5 w-50 mx-auto border border-2 border-primary p-5 rounded"
+    >
+      <h2 class="mt-0 pt-0 mb-4 text-center text-secondary">Search any word</h2>
+      <div class="d-flex gap-2">
+        <input
+          id="search-word-field"
+          type="text"
+          class="form-control border-2"
+          placeholder="Search word. Example keyboard"
+        />
+        <button onclick="searchWord()" class="btn btn-primary">Check</button>
+      </div>
+      <div id="word-container">
+
+      </div>
+    </header>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      const loadData = async (word) => {
+        try {
+          const url = `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`;
+          const res = await fetch(url);
+          const data = await res.json();
+          displayData(data[0]);
+        } catch (error) {
+          console.log(error);
+        }
+      };
+
+      const displayWordInfo = (infos) => {
+        let def = "";
+        try {
+          infos.forEach((info) => {
+            def += `<li class='mb-2'>${info?.definition}</li>`;
+          });
+        } catch (error) {
+          console.log(error);
+        }
+        return def;
+      };
+
+      const displayAudio = (phonetics) => {
+        let audio = "";
+        try {
+          phonetics.forEach((phonetic) => {
+            const findAudio = phonetic.audio;
+            if (findAudio.includes(".mp3")) {
+              audio = findAudio;
+            }
+          });
+        } catch (error) {
+          console.log(error);
+        }
+        return audio;
+      };
+
+      const displayData = (word) => {
+        const container = document.getElementById("word-container");
+        const div = document.createElement("div");
+        const definitions = word?.meanings[0]?.definitions;
+        const audio = displayAudio(word?.phonetics);
+        container.innerHTML = '';
+        div.innerHTML = `
+            <div class="d-flex mt-4">
+            <p class="col-6 text-primary">${word?.phonetic}</p>
+            <audio src="${audio}" controls class="col-6"></audio>    
+            </div>
+            <div class="d-flex gap-3 mt-3">
+            <p class="fw-bold text-secondary">${
+              word?.meanings[0]?.partOfSpeech
+            }</p>
+            <div
+                class="w-100 bg-secondary bg-opacity-25"
+                style="height: 1px; margin-top: 13px"
+            ></div>
+            </div>
+            <div class="text-secondary">
+            <p>Meaning</p>
+            <ul>
+                ${displayWordInfo(word?.meanings[0]?.definitions)}
+            </ul>
+            <p>
+                Synonyms <span class="text-secondary fw-bold ms-3">${
+                  word.meanings[0].synonyms[0] ? word.meanings[0].synonyms[0] : 'no synonyms'
+                }</span>
+            </p>
+            <div class="d-flex gap-3 mt-3">
+                <p class="fw-bold">${word?.meanings[1]?.partOfSpeech}</p>
+                <div
+                class="w-100 bg-secondary bg-opacity-25"
+                style="height: 1px; margin-top: 13px"
+                ></div>
+            </div>
+            <p>Meaning</p>
+            <ul>
+                ${displayWordInfo(word?.meanings[1]?.definitions)}
+            </ul>
+            <p class="mt-4">Source: <a href="${
+              word?.sourceUrls[0]
+            }" target="_blank">${word?.sourceUrls[0]}</a></p>
+            </div>
+        `;
+        container.appendChild(div);
+      };
+
+      const searchWord = () => {
+        const getWord = document.getElementById('search-word-field').value;
+        loadData(getWord);
+      };
+
+      loadData("keyboard");
+    </script>
+  </body>
+</html>

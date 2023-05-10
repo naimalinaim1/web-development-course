@@ -1,0 +1,10 @@
+.product {
+  border: 2px solid sandybrown;
+  margin: 10px;
+  padding: 5px;
+  border-radius: 7px;
+}
+
+#button {
+  background: skyblue;
+}

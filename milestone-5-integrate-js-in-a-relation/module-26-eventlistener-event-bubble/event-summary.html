@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Summary</title>
+</head>
+<body>
+
+    <p id="input-text-display">Default input text</p>
+    <input type="text" id="input-filed">
+    <button id="update-input">Update</button>
+    <br> <br>
+    <h2 id="text-change">I am Default text</h2>
+    <button onclick="handleOnClick()">Update Text by onclick</button>
+    <button  id="event-listener">Update text by event listener</button>
+
+    <script>
+        function handleOnClick() {
+            const handleStatus = document.getElementById('text-change');
+            handleStatus.innerText = 'Update text by onclick';
+        }
+        
+        document.getElementById('event-listener').addEventListener('click', function() {
+            const handleStatus = document.getElementById('text-change');
+            handleStatus.innerText = 'Update text by event listener';
+
+        })
+
+        document.getElementById('update-input').addEventListener('click', function () {
+            const inputFiled = document.getElementById('input-filed');
+            const inputText = inputFiled.value;
+
+            const p = document.getElementById('input-text-display');
+            p.innerText = inputText;
+
+            inputFiled.value = '';
+        })
+    </script>
+</body>
+</html>

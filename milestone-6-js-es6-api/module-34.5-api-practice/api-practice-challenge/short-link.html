@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Short link</title>
+    <!-- daisyUI cdn link -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@2.51.0/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <header
+      class="w-[60%] bg-indigo-700 border border-4 border-fuchsia-500 p-8 rounded-md gap-4 mx-auto mt-20 border flex"
+    >
+      <input
+        id="link-field"
+        type="text"
+        placeholder="Shorten a link here...."
+        class="input input-bordered input-accent w-full max-w-xxl"
+      />
+      <button
+        onclick="shortLinkText();"
+        class="btn btn-accent text-white font-bold"
+      >
+        Shorten it!
+      </button>
+    </header>
+    <main>
+      <section class="w-[60%] mx-auto mt-10">
+        <div id="short-link-container" class="font-bold space-y-2"></div>
+      </section>
+    </main>
+
+    <script>
+      const shortLinkText = () => {
+        const getLink = document.getElementById("link-field").value;
+        if (getLink !== "" && getLink.includes(".")) {
+          shortLink(getLink);
+        } else {
+          alert("Please enter a valid link");
+        }
+      };
+      const shortLink = async (link) => {
+        const url = `https://api.shrtco.de/v2/shorten?url=${link}`;
+        try {
+          const res = await fetch(url);
+          const data = await res.json();
+          displayShortLink(data.result, link);
+        } catch (e) {
+          console.log(e);
+        }
+      };
+
+      const displayShortLink = (data, originalLink) => {
+        const container = document.getElementById("short-link-container");
+        container.innerHTML = `
+        <p>
+            Link before shorten:
+            <a href="${originalLink}" target="_blank" class="text-blue-500">${originalLink}</a>
+          </p>
+          <p>
+            Shortened link:
+            <a href="${data.full_short_link}" target="_blank" class="text-blue-500">${data.full_short_link}</a>
+            <span
+              class="text-blue-700 underline cursor-pointer"
+              title="Copy link"
+              onclick="copyLink('${data.full_short_link}')"
+              >Copy link</span
+            >
+          </p>
+        `;
+      };
+      const copyLink = (link) => {
+        try {
+          navigator.clipboard.writeText(link);
+          alert('copy successful');
+        } catch (e) {
+          alert('Please try again. to copy');
+        }
+      };
+    </script>
+  </body>
+</html>

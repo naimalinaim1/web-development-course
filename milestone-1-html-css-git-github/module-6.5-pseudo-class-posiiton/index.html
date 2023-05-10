@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo class and position</title>
+    <style>
+        h1 {
+            color: rgb(255, 140, 0);
+            padding: 10px;
+        }
+        h1:hover {
+            color: white;
+            background: darkcyan;
+            border-radius: 5px;
+        }
+        a:visited {
+            color: dodgerblue;
+        }
+        li:nth-child(2n + 1) {
+            color: red;
+            background: rgb(169, 169, 169);
+        }
+        h1::after {
+            content: '222';
+            color: gray;
+        }
+        h1:before {
+            content: '111 ';
+            color: gray;
+        }
+        .section div:last-child {
+            position: relative;
+            left: 40%;
+            top: -75px;
+        }
+        
+        .section div:nth-child(2) {
+            position: relative;
+            left: 41.5%;
+            z-index: 1;
+        }
+        .section div:first-child {
+            position: relative;
+            left: 42%;
+            top: 75px;
+            z-index: 2;
+        }
+
+
+    </style>
+</head>
+<body>
+    <section>
+        <h1>I am ....</h1>
+        <a href="https://www.google.com">Go to ...</a>
+        <ul>
+            <li>List - 1</li>
+            <li>List - 2</li>
+            <li>List - 3</li>
+            <li>List - 4</li>
+            <li>List - 5</li>
+        </ul>
+    </section>
+    <section class="section">
+        <div><img src="images/boy.svg" alt=""></div>
+        <div><img src="images/ring.svg" alt=""></div>
+        <div><img src="images/water.svg" alt=""></div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overflow and ellipsis</title>
+    <style>
+        .box-1 {
+            width: 250px;
+            height: 250px;
+            border: 1px solid red;
+            margin-bottom: 5px;
+            overflow: scroll;
+            overflow-x: hidden;
+        }
+        .box-2 p {
+            border: 1px solid red;
+            width: 330px;
+            word-wrap: nowrap;
+            text-overflow: ellipsis;
+        }
+        .mini {
+            width: 100px;
+            border: 1px solid palegreen;
+            overflow: hidden;
+        }
+        .mini p {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    </style>
+</head>
+<body>
+    <div class="mini">
+        <p class="short-text" title="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, neque?">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, neque?</p>
+    </div>
+    <div class="box-1">
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam voluptas dolorem minima ex praesentium et molestias accusamus repudiandae consectetur, mollitia commodi sint fuga obcaecati voluptatibus quisquam ea officiis maxime necessitatibus eligendi, nihil quibusdam corrupti dolorum provident? Consequatur error, perspiciatis sunt omnis eveniet tenetur? Odio necessitatibus rem ad quasi ab quas, in similique dolore reiciendis eveniet atque! Ut harum, consequuntur cumque veritatis distinctio laboriosam numquam fuga quasi esse fugit molestiae, aspernatur repellat impedit totam quas, ea sapiente itaque nihil animi explicabo nostrum quo? Impedit autem ut sunt sapiente inventore voluptatum blanditiis, assumenda consectetur eligendi perferendis aperiam, dicta omnis, debitis ratione beatae.</p>
+    </div>
+    <div class="box-2">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus tempora vel quis quibusdam quae quia animi id, officia perferendis dolores in. Odio debitis placeat recusandae eius dolore error dolor aliquam voluptatum! Deleniti, dolorum iste architecto tenetur delectus totam ipsam voluptatum et repudiandae cum deserunt nisi beatae at suscipit ex assumenda quia quos aliquam, odio a facere. Possimus molestias debitis adipisci dolores ullam recusandae nesciunt qui quaerat ab molestiae. Totam, quas?</p>
+    </div>
+</body>
+</html>

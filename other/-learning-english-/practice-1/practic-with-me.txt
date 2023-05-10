@@ -1,0 +1,84 @@
+What is your name?
+My name is naim ali.
+What is your father name?
+My father name is anis.
+What is your mother name?
+My mother name is nazma.
+What is your brother name?
+My brother name is ...
+My brother name is ...
+What is your sister name?
+My sisiter name is ....?
+What is your grandfather name?
+My grandfather name is shokor ali.
+What is your grandmother name?
+My grandmother name is amena.
+What is your wife name?
+My wife name is ....
+What is your school name?
+My school name is Yearpur High School.
+What is your computer brand?
+My computer brand name is Dell.
+What is your pen name?
+My pen name is Good luck ball pen.
+Waht is your shirt brand?
+My shirt name is ax.
+Waht is your office name?
+My office name is TheExpertIt.
+What is your father office name?
+My father office name is Contenental Garments ltd.
+What is your mother office name?
+My mother office name is Contenental Graments ltd.
+
+What is your profession?
+My profession is learning a web development.
+What is your father's profession?
+My father profession is a worker.
+What is your mother's profession?
+My mother profession is a worker.
+
+How are you?
+I am fine.
+I am well.
+I am right.
+I got fever.
+I am suffering from cold.
+I have a headache.
+I am not well.
+How is your father?
+My father is fine.
+My father is right.
+My father got fever.
+How is your mother?
+My mother is fine.
+My mother is right.
+How is your brother?
+My brother is well.
+My brother is right.
+How is your sister?
+My sister is fine.
+How is your grandfather?
+My grandfather is fine.
+How is your grandmother?
+My grandmother is fine.
+How is your school?
+my school is not well.
+How is your new job?
+my new job is very good
+How is your office?
+my office is not bad.
+How is your new class?
+My new class is bad.
+How is learning english in your new class?
+my new learning english class is good.
+How is your health now?
+now my health is good.
+How is your bussiness?
+my bussines is very bad.
+How is your best friend?
+my best friend is good.
+
+
+
+
+

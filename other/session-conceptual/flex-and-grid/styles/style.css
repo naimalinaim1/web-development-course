@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+}
+
+.header {
+    color: #ddd;
+    background: rgb(25, 95, 175);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+}
+.header nav ul {
+    display: flex;
+    list-style: none;
+}
+.header nav ul li {
+    margin-left: 30px;
+}
+.header nav ul li a{
+    color: rgb(188, 185, 185);
+    font-size: 17px;
+    text-decoration: none;
+    display: block;
+}
+/* Explore grid */
+.grid {
+    display: grid;
+    grid-template-areas: "header header header" "sidebar main footer" "one one two" "my-footer my-footer my-footer";
+}
+.grid-header {
+    grid-area: header;
+    background: skyblue;
+}
+.sidebar {
+    grid-area: sidebar;
+    background: gray;
+}
+.main-area {
+    grid-area: main;
+    background: plum;
+}
+.grid-footer {
+    grid-area: footer;
+    background: lightcoral;
+}
+.one {
+    background: rebeccapurple;
+    grid-area: one;
+}
+.two {
+    background: lightcyan;
+    grid-area: two;
+}
+.my-footer {
+    background: lightgreen;
+    grid-area: my-footer;
+}
+
+/* a grid */
+.a {
+    margin-top: 50px;
+    display: grid;
+    grid-template-areas: "a-header a-header a-header" "a-sidebar a-main a-main" "a-1-of-3 a-2-of-3 a-3-of-3" "a-footer a-footer a-footer";
+    grid-template-rows: 100px 200px 100px 50px;
+}
+.a > div {
+    /* width: 200px;
+    height: 200px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 600;
+    color: rgb(60, 59, 59);
+}
+
+.a-header {
+    background: lightblue;
+    grid-area: a-header;
+}
+.a-sidebar {
+    background: lightcoral;
+    grid-area: a-sidebar;
+}
+.a-main {
+    background: lightcyan;
+    grid-area: a-main;
+}
+.a-1-of-3 {
+    grid-area: a-1-of-3;
+    background: lightgoldenrodyellow;
+}
+.a-2-of-3 {
+    grid-area: a-2-of-3;
+    background: lightgray;
+}
+.a-3-of-3 {
+    grid-area: a-3-of-3;
+    background: lightpink;
+}
+.a-footer {
+    grid-area: a-footer;
+    background: lightsalmon;
+}
+
+.b {
+    display: grid;
+    grid-template-areas: "b-header b-header" "b-sidebar b-main" "b-footer b-footer";
+    grid-template-rows: 120px 300px 70px;
+    grid-template-columns: 200px 900px;
+    margin-top: 50px;
+}
+.b > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+.b-header {
+    background: darkblue;
+    grid-area: b-header;
+}
+.b-sidebar {
+    background: darkcyan;
+    grid-area: b-sidebar;
+}
+.b-main {
+    background: darkgoldenrod;
+    grid-area: b-main;
+}
+.b-footer {
+    background: darkgray;
+    grid-area: b-footer;
+}

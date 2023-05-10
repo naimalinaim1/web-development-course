@@ -1,0 +1,44 @@
+introduction ---------
+What is your name?
+My name is Naim.
+What is your father's name?
+My father's name is Anis.
+What is your mother's name?
+My mother's name is Nazma.
+What is your brother's name?
+My brother's name is abusayeed, nazmul.
+grandfather ----
+My grandfather's name is shokor ali.
+My grandmother's name is amena?
+
+What is the name of your best friends?
+My best friend's name is raihan?
+
+profession ------------
+My father's is a farmer.
+My mother's is a house wife.
+
+question ----
+What is your name?
+What is your father's name?
+What is your mother's name?
+
+how---
+How are you?
+	I am well.
+	I am right.
+	I am not well. i got fever.
+	I am suffering from cold.
+	I have a headache.
+How  is your father?
+	My father is fine.
+How is your school?
+How is your new job?
+How is your bussiness?
+
+How is your school going on?
+How is your bussiness going on?
+
+How is your health now?
+
+

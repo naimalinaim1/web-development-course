@@ -1,0 +1,11 @@
+$primary: skyblue;
+$text-primary: indigo;
+body {
+    margin: 0;
+}
+h1 {
+    color: $text-primary;
+    background: $primary;
+    padding: 10px 15px;
+    margin: 0;
+}

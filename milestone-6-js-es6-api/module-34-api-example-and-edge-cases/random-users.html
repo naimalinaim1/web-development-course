@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random Uses</title>
+</head>
+<body>
+    <header>
+        <h2>Random Users</h2>
+    </header>
+    <main>
+        <section>
+            <img id="img" src="" alt="" style="width: 70px; height: 70px; border-radius: 50%;">
+            <h1>Name: <span id="name"></span></h1>
+            <h3>Gender: <span id="gender"></span></h3>
+            <p>Location: <span id="location"></span></p>
+            <button onclick="loadUsers();">Refresh</button>
+        </section>
+    </main>
+
+    <script>
+        const loadUsers = () => {
+            fetch('https://randomuser.me/api/?gender=female')
+            .then(res => res.json())
+            .then(data => displayUsers(data))
+        }
+        const displayUsers = (users) => {
+            const nameElement = document.getElementById('name');
+            const genderElement = document.getElementById('gender');
+            const locationElement = document.getElementById('location');
+            const imageElement = document.getElementById('img');
+
+            const name = users.results[0].name.first + ' ' + users.results[0].name.last;
+            const gender = users.results[0].gender;
+            const location = users.results[0].location.city;
+            const img = users.results[0].picture.thumbnail;
+
+            nameElement.innerText = name;
+            genderElement.innerText = gender;
+            locationElement.innerText = location;
+            imageElement.src = img;
+        }
+
+
+        loadUsers();
+    </script>
+</body>
+</html>

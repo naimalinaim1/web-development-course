@@ -1,0 +1,10 @@
+#root {
+  padding-top: 1px;
+  width: 96%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

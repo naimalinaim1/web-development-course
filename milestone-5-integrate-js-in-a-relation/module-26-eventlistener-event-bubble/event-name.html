@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Name</title>
+</head>
+<body>
+    <div>
+        <h1>Explore more events</h1>
+        <button id="btn">Events</button>
+        <br>
+        <br>
+        <input type="text" id="input-text">
+    </div>
+
+    <script>
+        // document.getElementById('btn').addEventListener('click', function() {
+        //     console.log('event triggered');
+        // })
+        // document.getElementById('btn').addEventListener('mouseenter', function() {
+        //     console.log('event triggered');
+        // })
+        // document.getElementById('btn').addEventListener('mousemove', function() {
+        //     console.log('event triggered');
+        // })
+
+        
+        // document.getElementById('input-text').addEventListener('focus', function() {
+        //     console.log('input focus');
+        // })
+        // document.getElementById('input-text').addEventListener('blur', function() {
+        //     console.log('input blur');
+        // })
+
+        document.getElementById('input-text').addEventListener('keyup', function(event) {
+            console.log(event.target.value);
+        })
+
+
+    </script>
+</body>
+</html>
